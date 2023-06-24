@@ -1,0 +1,6 @@
+name: CVFarmlands
+main: org.cubeville.cvfarmlands.CVFarmlands
+authors: [FrediW]
+version: 1.18
+depend: [WorldGuard]
+api-version: 1.18
