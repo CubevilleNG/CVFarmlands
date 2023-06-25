@@ -11,11 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
-import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.event.EventHandler;
@@ -147,7 +144,7 @@ public class CVFarmlands extends JavaPlugin implements Listener {
             if (((MaterialFilterRegion)this.breakPermRegions.get(i)).blockIsWithin(x, y, z)) {
                 if (!((MaterialFilterRegion)this.breakPermRegions.get(i)).isIncluded(block.getType())) {
                     event.setCancelled(true);
-                    event.getPlayer().sendMessage("but you can't break that block here.");
+                    event.getPlayer().sendMessage("§c§lHey! §7Sorry, but you can't place that block here.");
                 }
                 return;
             }
@@ -174,7 +171,7 @@ public class CVFarmlands extends JavaPlugin implements Listener {
                 return;
         }
         event.setCancelled(true);
-        event.getPlayer().sendMessage("but you can't place that block here.");
+        event.getPlayer().sendMessage("§c§lHey! §7Sorry, but you can't place that block here.");
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
